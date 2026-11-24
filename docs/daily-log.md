@@ -33,9 +33,10 @@ For today's task, I made my working directories: a folder for my daily logs, evi
 - Created the daily-log.md file and the placeholder files
 - Initialised the Git repo and pushed it to GitHub
 
-**What I used:**
-I used shell commands to make everything because it was easier and faster, although I need to do a little research on the commands to use.
-
+**What gave me issues:**
+- I created the GitHub repo with the "Add README" option on before pushing, so GitHub already had a commit my laptop didn't. A normal push would have been rejected because the two histories didn't match.
+- I fixed it by connecting the repo with `git remote add origin`, then running `git pull origin main --allow-unrelated-histories` to merge GitHub's README with my local files, and then `git push -u origin main`.
+- A text editor opened asking for a merge message and the terminal looked stuck ("Waiting for your editor to close the file"). I saved and closed the `MERGE_MSG` tab and the merge finished.
 I used `mkdir` to make the folders, `cd` to move through them, and a command I learnt today, `New-Item`, which is used to make a new item/file.
 
 **What I found out:**
